@@ -688,7 +688,7 @@
   <!-- TABS -->
   <div style="margin:8px 20px 0;padding:10px 14px;background:#FFF0F6;border-radius:12px;border-left:3px solid var(--pink);font-size:12px;color:var(--text-soft);line-height:1.7;">
     📅 <strong style="color:var(--pink)">定期講座</strong>（毎月開催）→ freee予約サイト<br>
-    📝 <strong style="color:var(--green)">単発イベント</strong>（直近開催）→ Googleフォーム
+    📝 <strong style="color:var(--green)">直近イベント</strong>（単発開催）→ Googleフォーム
   </div>
   <div class="tabs-wrap">
     <div class="tabs">
@@ -698,7 +698,7 @@
       </button>
       <button class="tab-btn" onclick="switchTab('green')" id="tab-green">
         <span class="tab-icon">📝</span>
-        <span>② Googleフォーム<br><small style="font-weight:500">直近イベント</small></span>
+        <span>② Googleフォーム<br><small style="font-weight:500">直近イベント（単発）</small></span>
       </button>
     </div>
   </div>
@@ -1021,12 +1021,14 @@
   </div>
 
   <!-- LINE BIG -->
-  <div class="line-big">
-    <div class="line-big-title">💚 公式LINEを友達追加してね</div>
-    <div class="line-big-sub">
-      ご予約後は公式LINEへ<br>
-      「レッスン名＋お名前」をメッセージ🌸<br>
-      レッスン場所や詳細をご案内します✨
+  <div class="line-big" style="border:3px solid #04A347;">
+    <div style="background:#06C755; color:#000; font-weight:900; font-size:13px; text-align:center; padding:6px 12px; border-radius:20px; display:inline-block; margin-bottom:12px; letter-spacing:0.05em;">⚠️ ご予約後の必須ステップ</div>
+    <div class="line-big-title" style="font-size:18px;">💚 公式LINEを友達追加してね！</div>
+    <div class="line-big-sub" style="margin:10px 0 16px;">
+      予約完了後、必ず公式LINEへ<br>
+      <strong>「レッスン名＋お名前」</strong>をメッセージ🌸<br>
+      <span style="color:#E8186B; font-weight:700;">LINEの返信が来て初めてご予約完了です！</span><br>
+      <span style="font-size:13px; color:#666;">※レッスン場所や詳細もLINEでご案内します✨</span>
     </div>
     <a href="https://lin.ee/E3SqRqN" target="_blank" class="btn-line-add">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="#06C755"><path d="M12 2C6.48 2 2 6.13 2 11.2c0 3.11 1.6 5.87 4.09 7.64v3.16l3.03-1.66c.9.25 1.87.39 2.88.39 5.52 0 10-4.13 10-9.2S17.52 2 12 2z"/></svg>
@@ -1077,6 +1079,70 @@
     const activeTab = document.getElementById('tab-' + color);
     activeTab.classList.add('active-' + color);
   }
+</script>
+<!-- トップへ戻るボタン -->
+<button onclick="window.scrollTo({top:0,behavior:'smooth'})" id="toTop" style="
+  display:none;
+  position:fixed;
+  bottom:80px;
+  right:16px;
+  z-index:999;
+  background:var(--pink);
+  color:#fff;
+  border:none;
+  border-radius:50%;
+  width:48px;
+  height:48px;
+  font-size:20px;
+  cursor:pointer;
+  box-shadow:0 3px 12px rgba(0,0,0,0.25);
+  line-height:48px;
+  text-align:center;
+">↑</button>
+
+<script>
+  const toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', () => {
+    toTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
+</script>
+
+<!-- トップへ戻るボタン -->
+<a href="#top" class="back-to-top-btn" id="backToTop">
+  ↑ トップへ
+</a>
+
+<style>
+.back-to-top-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 16px;
+  background: #fff;
+  color: #E8186B;
+  border: 2px solid #E8186B;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: 50px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+  text-decoration: none;
+  z-index: 9999;
+  display: none;
+}
+.back-to-top-btn.visible {
+  display: block;
+}
+</style>
+<script>
+window.addEventListener('scroll', function() {
+  var btn = document.getElementById('backToTop');
+  if (window.scrollY > 300) {
+    btn.classList.add('visible');
+  } else {
+    btn.classList.remove('visible');
+  }
+});
 </script>
 </body>
 </html>
