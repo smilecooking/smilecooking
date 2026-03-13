@@ -115,6 +115,7 @@
   #hero {
     position: relative;
     height: 100vh;
+    height: 100svh;
     min-height: 600px;
     overflow: hidden;
   }
@@ -644,6 +645,7 @@
 
     /* ヒーロー */
     .hero-content { padding: 0 24px; padding-top: 72px; }
+    #hero { min-height: 580px; }
     .slide-dots { left: 24px; bottom: 24px; }
     .hero-badge { font-size: 0.62rem; padding: 5px 14px; margin-bottom: 18px; }
     .hero-copy { font-size: 1.45rem; line-height: 1.75; margin-bottom: 16px; }
@@ -716,7 +718,7 @@
       料理を通して、子どもとママの「生きる力」を育てる。<br>
       スマイルクッキングは、ごはんと笑顔をつくります。
     </p>
-    <a href="#cta" class="hero-btn">まずはLINEでご相談ください</a>
+    <a href="#cta" class="hero-btn">公式LINEで予約・相談する<br>（友達追加無料）</a>
   </div>
 
   <div class="slide-dots">
@@ -906,7 +908,7 @@
   </div>
 
   <div class="reveal" style="text-align:center;margin-top:40px;">
-    <a href="https://lin.ee/iZRRZMm" class="btn-primary" target="_blank">💬 LINEでお気軽にご相談を</a>
+    <a href="https://lin.ee/iZRRZMm" class="btn-primary" target="_blank">💬 公式LINEで予約・相談する<br>（友達追加無料）</a>
   </div>
 </section>
 
@@ -967,6 +969,77 @@
     });
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
+</script>
+
+<!-- フローティングナビ -->
+<style>
+  #floatNav { position:fixed; bottom:24px; right:20px; z-index:200; opacity:0; transition:opacity 0.3s; }
+  #floatNav.visible { opacity:1; }
+  #floatMenuBtn {
+    width:52px; height:52px; border-radius:50%;
+    background:var(--warm-brown); color:white;
+    font-size:1.4rem; border:none; cursor:pointer;
+    box-shadow:0 4px 16px rgba(122,79,58,0.35);
+    display:flex; align-items:center; justify-content:center;
+    transition:transform 0.2s;
+    margin-left:auto;
+  }
+  #floatMenuBtn:hover { transform:scale(1.08); }
+  #floatMenuList {
+    display:none;
+    flex-direction:column;
+    gap:8px;
+    margin-bottom:10px;
+    align-items:flex-end;
+  }
+  #floatMenuList.open { display:flex; }
+  .float-item {
+    display:flex; align-items:center; gap:10px;
+    background:white; color:var(--text);
+    padding:10px 16px; border-radius:24px;
+    font-size:0.8rem; font-family:'Noto Sans JP',sans-serif;
+    font-weight:500; letter-spacing:0.05em;
+    text-decoration:none; white-space:nowrap;
+    box-shadow:0 2px 12px rgba(122,79,58,0.12);
+    transition:background 0.2s, transform 0.2s;
+  }
+  .float-item:hover { background:var(--pink-pale); transform:translateX(-3px); }
+</style>
+
+<div id="floatNav">
+  <div id="floatMenuList">
+    <a href="#teachers" class="float-item" onclick="closeMenu()">👩‍🍳 私たちについて</a>
+    <a href="#voices" class="float-item" onclick="closeMenu()">💬 お客様の声</a>
+    <a href="#strengths" class="float-item" onclick="closeMenu()">✨ ここを選ぶ理由</a>
+    <a href="#courses" class="float-item" onclick="closeMenu()">📋 講座一覧</a>
+    <a href="#" class="float-item" onclick="window.scrollTo({top:0,behavior:'smooth'});closeMenu();return false;">↑ トップへ戻る</a>
+  </div>
+  <button id="floatMenuBtn" onclick="toggleMenu()">≡</button>
+</div>
+
+<script>
+  const floatNav = document.getElementById('floatNav');
+  const menuList = document.getElementById('floatMenuList');
+  const menuBtn = document.getElementById('floatMenuBtn');
+
+  window.addEventListener('scroll', () => {
+    floatNav.classList.toggle('visible', window.scrollY > 400);
+  });
+
+  function toggleMenu() {
+    menuList.classList.toggle('open');
+    menuBtn.textContent = menuList.classList.contains('open') ? '✕' : '≡';
+  }
+
+  function closeMenu() {
+    menuList.classList.remove('open');
+    menuBtn.textContent = '≡';
+  }
+
+  // メニュー外タップで閉じる
+  document.addEventListener('click', (e) => {
+    if (!floatNav.contains(e.target)) closeMenu();
+  });
 </script>
 </body>
 </html>
