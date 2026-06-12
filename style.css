@@ -360,12 +360,12 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ── ロゴ画像 ── */
 .nav-logo-icon {
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  object-fit: cover;
-  background: var(--white);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  width: auto;
+  height: 38px;
+  border-radius: 0;
+  object-fit: contain;
+  background: transparent;
+  box-shadow: none;
 }
 .footer-logo-img {
   height: 46px;
@@ -488,7 +488,7 @@ img { max-width: 100%; height: auto; display: block; }
   margin-bottom: 2px;
 }
 @media (max-width: 640px) {
-  .nav-logo-icon { width: 30px; height: 30px; border-radius: 8px; }
+  .nav-logo-icon { width: auto; height: 30px; border-radius: 0; }
   .photo-grid { grid-template-columns: 1fr; gap: 14px; margin-top: 24px; }
   .photo-feature { grid-template-columns: 1fr; margin-top: 28px; }
   .photo-feature img { min-height: 220px; }
@@ -537,11 +537,12 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .nav-logo-icon {
-  width: 26px;
-  height: 26px;
-  border-radius: 7px;
+  width: auto;
+  height: 34px;
+  border-radius: 0;
   object-fit: contain;
   flex-shrink: 0;
+  background: transparent;
 }
 
 .nav-logo-name {
@@ -583,8 +584,8 @@ img { max-width: 100%; height: auto; display: block; }
     height: 50px;
   }
   .nav-logo-icon {
-    width: 24px;
-    height: 24px;
+    width: auto;
+    height: 30px;
   }
   .nav-logo-name {
     font-size: 14px;
@@ -646,13 +647,12 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .nav-logo-icon {
   display: block !important;
-  width: 26px !important;
-  height: 26px !important;
-  border-radius: 7px !important;
+  width: auto !important;
+  height: 34px !important;
   object-fit: contain !important;
-  flex-shrink: 0;
-  background: transparent;
-  box-shadow: none;
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 .nav-logo-name {
   display: inline-block !important;
@@ -668,8 +668,8 @@ img { max-width: 100%; height: auto; display: block; }
 }
 @media (max-width: 640px) {
   .nav-logo-icon {
-    width: 24px !important;
-    height: 24px !important;
+    width: auto !important;
+    height: 30px !important;
   }
   .nav-logo-name {
     font-size: 14px;
@@ -770,7 +770,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .nav-logo-icon {
   display: block !important;
-  width: 30px !important;
+  width: auto !important;
   height: 30px !important;
   border-radius: 0 !important;
   object-fit: contain !important;
@@ -816,7 +816,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 @media (max-width: 640px) {
   .nav-logo-icon {
-    width: 28px !important;
+    width: auto !important;
     height: 28px !important;
   }
   .nav-logo-name {
@@ -916,4 +916,19 @@ img { max-width: 100%; height: auto; display: block; }
     font-size: 14px;
     line-height: 1.9;
   }
+}
+
+
+/* ── 日本語の読みやすい改行（全ページ共通） ── */
+/* 見出し：行の長さを揃えて折る */
+h1, h2, h3, .section-title, .hero-title, .empathy-title {
+  text-wrap: balance;
+}
+/* 本文：最終行が一文字だけ残るような不格好な折りを防ぐ */
+p, li, .section-lead, .final-cta-lead, .faq-a, .compare-note {
+  text-wrap: pretty;
+}
+/* 文節単位の改行（対応ブラウザでは「テーマ／で開催」のような切れ方がなくなる） */
+h1, h2, h3, p, li, .section-title, .section-lead, .final-cta-lead {
+  word-break: auto-phrase;
 }
