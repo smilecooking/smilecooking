@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-08PRGT939K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-08PRGT939K');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="#7EA889" name="theme-color"/>
+<title>レッスン一覧｜太田市の親子・小学生・おやつ料理教室</title>
+<meta content="スマイルクッキングのレッスン一覧。親子レッスン、小学生向け放課後クッキングクラブ、おやつレッスン、記念日プランから選べます。群馬県太田市。" name="description"/><meta content="index,follow" name="robots"/>
+<link href="https://smilecooking.jp/lessons/index.html" rel="canonical"/>
+<link href="../assets/images/favicon.png" rel="icon" type="image/png"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="website" property="og:type"/>
+<meta content="スマイルクッキング" property="og:site_name"/>
+<meta content="レッスン一覧｜太田市の親子・小学生・おやつ料理教室" property="og:title"/>
+<meta content="スマイルクッキングのレッスン一覧。親子レッスン、小学生向け放課後クッキングクラブ、おやつレッスン、記念日プランから選べます。群馬県太田市。" property="og:description"/>
+<meta content="https://smilecooking.jp/lessons/index.html" property="og:url"/>
+<meta content="https://smilecooking.jp/assets/images/oyako_main.webp" property="og:image"/><meta content="レッスン一覧｜太田市の親子・小学生・おやつ料理教室" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="レッスン一覧｜太田市の親子・小学生・おやつ料理教室" name="twitter:title"/>
+<meta content="スマイルクッキングのレッスン一覧。親子レッスン、小学生向け放課後クッキングクラブ、おやつレッスン、記念日プランから選べます。群馬県太田市。" name="twitter:description"/>
+<meta content="https://smilecooking.jp/assets/images/oyako_main.webp" name="twitter:image"/><meta content="レッスン一覧｜太田市の親子・小学生・おやつ料理教室" name="twitter:image:alt"/>
+<link as="image" href="../assets/images/lessons-oyako-list.webp" rel="preload"/><link href="../style.css" rel="stylesheet"/>
+<style>
+.page-hero { background:var(--green);padding:72px 24px 56px;text-align:center; }
+.page-hero h1 { color:white;font-size:clamp(26px,5vw,42px);margin-bottom:14px; }
+.page-hero p { color:rgba(255,255,255,0.82);font-size:16px;max-width:520px;margin:0 auto;line-height:1.9; }
+
+/* 迷ったらガイド */
+.guide-box {
+  background: var(--butter-light);
+  border-radius: var(--radius);
+  padding: 32px;
+  max-width: 700px;
+  margin: 40px auto 0;
+}
+.guide-title {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 20px;
+  text-align: center;
+}
+.guide-items { display:flex;flex-direction:column;gap:10px; }
+.guide-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  font-size: 14px;
+}
+.guide-cond { color:var(--text-muted);flex:1; }
+.guide-arrow { color:var(--terra);font-weight:700;flex-shrink:0; }
+.guide-dest { font-family:'Zen Maru Gothic',sans-serif;font-weight:700;color:var(--green);flex-shrink:0; }
+.guide-item { text-decoration:none; transition: transform 0.18s, box-shadow 0.18s; }
+.guide-item:hover { transform: translateY(-2px); box-shadow:0 4px 14px rgba(0,0,0,0.08); }
+
+/* レッスンブロック */
+.lesson-block { padding:72px 24px; }
+.lesson-block:nth-child(even) { background:var(--cream-dark); }
+.lesson-block-inner { max-width:840px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center; }
+.lesson-block-inner.reverse { direction:rtl; }
+.lesson-block-inner.reverse > * { direction:ltr; }
+.lesson-visual { background:var(--green-light);border-radius:var(--radius);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:80px;overflow:hidden; }
+.lesson-visual img { width:100%;height:100%;object-fit:cover; }
+.lesson-meta-tag { display:inline-block;padding:4px 12px;border-radius:12px;font-size:13px;font-weight:700;margin-bottom:12px; }
+.lesson-block-title { font-family:'Zen Maru Gothic',sans-serif;font-size:28px;font-weight:700;color:var(--text);margin-bottom:14px; }
+.lesson-block-desc { font-size:15px;color:var(--text-muted);line-height:1.95;margin-bottom:20px; }
+.lesson-block-points { list-style:none;margin-bottom:24px; }
+.lesson-block-points li { display:flex;align-items:flex-start;gap:8px;font-size:14px;color:var(--text);margin-bottom:8px;line-height:1.7; }
+.lesson-block-points li::before { content:'✓';color:var(--green);font-weight:700;flex-shrink:0; }
+.lesson-block-actions { display:flex;flex-wrap:wrap;gap:12px; }
+
+/* お知らせ枠 */
+.coming-block { max-width:840px;margin:0 auto;padding:48px;background:var(--white);border-radius:var(--radius);border:2px dashed var(--cream-dark);text-align:center;opacity:0.6; }
+
+
+.faq-list{margin-top:28px;display:flex;flex-direction:column;gap:10px;}
+.faq-item{background:var(--white);border-radius:var(--radius-sm);overflow:hidden;box-shadow:0 1px 8px rgba(0,0,0,0.05);}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:18px 22px;font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:700;color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+.faq-q::after{content:'＋';font-size:18px;color:var(--green);flex-shrink:0;}
+.faq-item.open .faq-q::after{content:'－';}
+.faq-a{display:none;padding:14px 22px 18px;font-size:13px;color:var(--text-muted);line-height:1.9;border-top:1px solid var(--cream-dark);}
+.faq-item.open .faq-a{display:block;}
+
+
+.faq-a img{width:100%;height:auto;border-radius:18px;margin-top:14px;display:block;}
+.faq-note{font-size:12px;color:var(--text-muted);margin-top:8px;}
+
+@media (max-width:640px) {
+  .lesson-block-inner { grid-template-columns:1fr; }
+  .lesson-block-inner.reverse { direction:ltr; }
+}
+</style>
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "レッスン一覧",
+    "url": "https://smilecooking.jp/lessons/index.html",
+    "description": "スマイルクッキングのレッスン一覧。親子レッスン、小学生向け放課後クッキングクラブ、おやつレッスン、記念日プランから選べます。群馬県太田市。",
+    "inLanguage": "ja"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://smilecooking.jp/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "レッスン一覧",
+        "item": "https://smilecooking.jp/lessons/index.html"
+      }
+    ]
+  }
+]
+</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "初めての場合はどこから参加すればいいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "迷ったら体験レッスンがおすすめです。教室の雰囲気やお子さんの反応を見てから、親子レッスン・小学生レッスン・おやつレッスンを選べます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "親子レッスンと小学生レッスンの違いは何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "親子レッスンは、保護者の方がそばで見守りながら参加する時間です。小学生レッスンは、お子さんが一人で考えて動く経験を積む放課後の習い事です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "集中力が続くか不安です。途中で遊んだり、席を離れてしまっても大丈夫ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "大丈夫です。小さい子どもの集中は、ずっと切れずに続くものではありません。アメリカ小児科学会（AAP）でも、3〜4歳ごろは集中できる時間が少しずつ伸びてくる一方で、まだ大人の支えが必要な時期とされています。 スマイルクッキングでは、全部を一気に集中させようとはしていません。途中で絵本を読んだり、和室で少し遊んだり、気持ちを切り替えてから戻ってくることもあります。 その間は「先生やママがお手伝いしちゃって大丈夫？」と、お子さん本人に確認しながら進めています。進み具合が大きく変わりすぎないように、講師2人体制で連携しているので、安心していらしてください。 レッスンの途中で少し休憩している時の様子です。進められる子は、その間もそれぞれのペースで進んでいます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "みんなと同じペースが苦手でも参加できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、大丈夫です。スマイルクッキングは、全員を同じ速さ・同じ反応にそろえる教室ではありません。料理には「見る」「触る」「混ぜる」「切る」「味を見る」「盛りつける」など、いろいろな入口があります。 みんなと同じペースが苦手な子も、その子が入りやすい工程から参加できます。必要に応じて手順を小さく分けたり、休憩をはさんだり、講師が間に入って進めます。 集団や初めての場所に不安がある場合は、事前にLINEでお子さんの様子を教えてください。その子に合う入り方を一緒に考えます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "予約前に相談できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。対象年齢・兄弟参加・アレルギー・どのレッスンが合うかなど、迷うことがあれば公式LINEでお気軽にご相談ください。"
+      }
+    }
+  ]
+}</script><noscript><style>.fade-in{opacity:1 !important;transform:none !important;}</style></noscript>
+</head>
+<body>
+<nav class="site-nav">
+<div class="nav-inner">
+<a class="nav-logo" href="../index.html"><img alt="スマイルクッキング" class="nav-logo-icon" decoding="async" height="256" src="../assets/images/logo-bear-nav.webp" width="256"/><span class="nav-logo-name">スマイルクッキング</span></a>
+<ul class="nav-links" id="global-nav-menu"><li><a href="../first-time.html">はじめての方</a></li><li><a aria-current="page" href="../lessons/index.html">レッスン一覧</a></li><li><a href="../price.html">料金</a></li><li><a href="../access.html">アクセス</a></li><li><a class="nav-cta" href="https://lin.ee/y2TBSKD">LINEで相談</a></li></ul>
+<button aria-controls="global-nav-menu" aria-expanded="false" aria-label="メニューを開く" class="menu-toggle" type="button">☰</button></div>
+</nav>
+<div class="page-hero">
+<div class="section-label" style="color:var(--butter);">Lessons</div>
+<h1>レッスン一覧</h1>
+<p>年齢や目的に合わせて、気になるところから選んでください。<br/>親子・小学生レッスンは、毎月共通のテーマ（だし・切る・煮る など）で開催しています。</p>
+</div>
+<!-- 迷ったらガイド -->
+<section class="section" style="padding-bottom:0;">
+<div class="section-inner">
+<div class="guide-box fade-in">
+<div class="guide-title">🤔 迷ったらここだけ見てください</div>
+<div class="guide-items">
+<a class="guide-item" href="https://tol-app.jp/s/smilecooking/mj9a03">
+<span class="guide-cond">初めてで教室の雰囲気を知りたい</span>
+<span class="guide-arrow">→</span>
+<span class="guide-dest">体験レッスン予約</span>
+</a>
+<a class="guide-item" href="https://tol-app.jp/s/smilecooking/itxeb0">
+<span class="guide-cond">親子で一緒に参加したい（3歳〜）</span>
+<span class="guide-arrow">→</span>
+<span class="guide-dest">親子レッスン予約</span>
+</a>
+<a class="guide-item" href="https://lin.ee/y2TBSKD">
+<span class="guide-cond">小学生が一人で挑戦する時間を持ちたい</span>
+<span class="guide-arrow">→</span>
+<span class="guide-dest">小学生レッスン予約</span>
+</a>
+<a class="guide-item" href="https://tol-app.jp/s/smilecooking/ulzvh9">
+<span class="guide-cond">手作りおやつやデコレーションを楽しみたい</span>
+<span class="guide-arrow">→</span>
+<span class="guide-dest">おやつレッスン予約</span>
+</a>
+<a class="guide-item" href="https://lin.ee/y2TBSKD">
+<span class="guide-cond">1歳誕生日・性別発表などの特別な日</span>
+<span class="guide-arrow">→</span>
+<span class="guide-dest">LINEで相談</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 親子レッスン -->
+<section class="lesson-block">
+<div class="lesson-block-inner">
+<div class="lesson-visual">
+<img alt="親子で一緒に料理に取り組む親子レッスンの様子" decoding="async" fetchpriority="high" height="960" loading="eager" onerror="this.style.display='none';this.parentNode.innerHTML='👨‍👩‍👧'" src="../assets/images/lessons-oyako-list.webp" width="1280"/>
+</div>
+<div class="fade-in">
+<span class="lesson-meta-tag" style="background:var(--green-light);color:var(--green);">対象：3歳〜</span>
+<h2 class="lesson-block-title">親子レッスン</h2>
+<p class="lesson-block-desc">「できた！」を隣で見守れる、親子の料理時間。家ではなかなかできない「子どもが主役の時間」をここでつくります。</p>
+<ul class="lesson-block-points">
+<li>親子で一緒に参加できる</li>
+<li>安全は講師が支えるから、ママは見守るだけでOK</li>
+<li>管理栄養士まい先生監修の安心メニュー</li>
+<li>少人数制でその子のペースに合わせて進む</li>
+</ul>
+<div class="lesson-block-actions">
+<a class="btn btn-green" href="oyako.html">詳しく見る</a>
+<a class="btn btn-secondary" href="https://tol-app.jp/s/smilecooking/itxeb0">予約ページへ</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 小学生 -->
+<section class="lesson-block">
+<div class="lesson-block-inner reverse">
+<div class="lesson-visual" style="background:#EEF7F0;">
+<img alt="それぞれのコンロで進める小学生レッスン" decoding="async" height="960" loading="lazy" onerror="this.style.display='none';this.parentNode.innerHTML='🔪'" src="../assets/images/shogakusei-main.webp" width="1280"/>
+</div>
+<div class="fade-in">
+<span class="lesson-meta-tag" style="background:var(--green-light);color:var(--green);">対象：小学生</span>
+<h2 class="lesson-block-title">放課後クッキングクラブ</h2>
+<p class="lesson-block-desc">料理を通して、自分で考えて動く力を育てる放課後の習い事。家では任せきれないことも、教室で経験に変えていきます。</p>
+<ul class="lesson-block-points">
+<li>家族の夕飯に並ぶ料理を作って持ち帰れる</li>
+<li>月2回。前半・後半でメニューが変わる</li>
+<li>包丁・火を使った本格体験</li>
+<li>月別テーマで料理のきほんと考える力を積み上げる</li>
+</ul>
+<div class="lesson-block-actions">
+<a class="btn btn-green" href="shogakusei.html">詳しく見る</a>
+<a class="btn btn-secondary" href="https://lin.ee/y2TBSKD">LINEで相談</a>
+</div>
+</div>
+</div>
+</section>
+<!-- おやつ -->
+<section class="lesson-block">
+<div class="lesson-block-inner">
+<div class="lesson-visual" style="background:var(--butter-light);">
+<img alt="おやつレッスン" decoding="async" height="960" loading="lazy" onerror="this.style.display='none';this.parentNode.innerHTML='🧁'" src="../assets/images/oyatsu_kids.webp" width="1280"/>
+</div>
+<div class="fade-in">
+<span class="lesson-meta-tag" style="background:var(--butter-light);color:#7A5500;">3歳〜親子・小学生・大人OK</span>
+<h2 class="lesson-block-title">おやつレッスン</h2>
+<p class="lesson-block-desc">講師自慢の研究レシピで、手作りおやつ・デコレーション・ラッピングまで楽しむ特別レッスン。親子の思い出にも、パティシエに憧れる子の挑戦にも。</p>
+<ul class="lesson-block-points">
+<li>3歳〜親子・小学生・大人も参加OK</li>
+<li>身近なおやつを手作りしてみる回も</li>
+<li>デコレーションやラッピングまで楽しめる回も</li>
+<li>材料や工程をできるだけ見える形で進めます</li>
+</ul>
+<div class="lesson-block-actions">
+<a class="btn btn-green" href="oyatsu.html">詳しく見る</a>
+<a class="btn btn-secondary" href="https://tol-app.jp/s/smilecooking/ulzvh9">予約ページへ</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 記念日 -->
+<section class="lesson-block">
+<div class="lesson-block-inner reverse">
+<div class="lesson-visual" style="background:var(--butter-light);"><img alt="教室で家族と一緒に料理を楽しむ様子" decoding="async" height="853" loading="lazy" src="../assets/images/kinenbi-main.webp" width="1280"/></div>
+<div class="fade-in">
+<span class="lesson-meta-tag" style="background:var(--butter-light);color:#7A5500;">ご家族・1歳さん向け</span>
+<h2 class="lesson-block-title">記念日プラン</h2>
+<p class="lesson-block-desc">スマッシュケーキ・ジェンダーリビールなど、作る時間からプレゼントになる完全予約制のプラン。1〜2組限定で、詳細はLINE相談。</p>
+<ul class="lesson-block-points">
+<li>スマッシュケーキ（1歳誕生日）</li>
+<li>ジェンダーリビール（性別発表）</li>
+<li>アレルギー対応の相談OK</li>
+<li>LINEで相談しながら一緒に考える</li>
+</ul>
+<div class="lesson-block-actions">
+<a class="btn btn-green" href="kinenbi.html">詳しく見る</a>
+<a class="btn btn-secondary" href="https://lin.ee/y2TBSKD">LINEで相談</a>
+</div>
+</div>
+</div>
+</section>
+<!-- レッスン選びFAQ -->
+<section class="section" style="background:var(--cream-dark);">
+<div class="section-inner">
+<div class="section-label fade-in">Q &amp; A</div>
+<h2 class="section-title fade-in">レッスン選びでよくある質問</h2>
+<div class="faq-list" style="max-width:680px;margin:0 auto;">
+<div class="faq-item fade-in">
+<button class="faq-q" onclick="this.parentElement.classList.toggle('open')">初めての場合はどこから参加すればいいですか？</button>
+<div class="faq-a">迷ったら体験レッスンがおすすめです。教室の雰囲気やお子さんの反応を見てから、親子レッスン・小学生レッスン・おやつレッスンを選べます。</div>
+</div>
+<div class="faq-item fade-in">
+<button class="faq-q" onclick="this.parentElement.classList.toggle('open')">親子レッスンと小学生レッスンの違いは何ですか？</button>
+<div class="faq-a">親子レッスンは、保護者の方がそばで見守りながら参加する時間です。小学生レッスンは、お子さんが一人で考えて動く経験を積む放課後の習い事です。</div>
+</div>
+<div class="faq-item fade-in">
+<button class="faq-q" onclick="this.parentElement.classList.toggle('open')">集中力が続くか不安です。途中で遊んだり、席を離れてしまっても大丈夫ですか？</button>
+<div class="faq-a">
+          大丈夫です。小さい子どもの集中は、ずっと切れずに続くものではありません。アメリカ小児科学会（AAP）でも、3〜4歳ごろは集中できる時間が少しずつ伸びてくる一方で、まだ大人の支えが必要な時期とされています。<br/><br/>
+          スマイルクッキングでは、全部を一気に集中させようとはしていません。途中で絵本を読んだり、和室で少し遊んだり、気持ちを切り替えてから戻ってくることもあります。<br/><br/>
+          その間は「先生やママがお手伝いしちゃって大丈夫？」と、お子さん本人に確認しながら進めています。進み具合が大きく変わりすぎないように、講師2人体制で連携しているので、安心していらしてください。
+          <img alt="レッスンの途中で休憩しながら過ごす子どもの様子" decoding="async" height="900" loading="lazy" src="../assets/images/lesson-break-faq.webp" width="1200"/>
+<div class="faq-note">レッスンの途中で少し休憩している時の様子です。進められる子は、その間もそれぞれのペースで進んでいます。</div>
+</div>
+</div>
+<div class="faq-item fade-in">
+<button class="faq-q" onclick="this.parentElement.classList.toggle('open')">みんなと同じペースが苦手でも参加できますか？</button>
+<div class="faq-a">はい、大丈夫です。スマイルクッキングは、全員を同じ速さ・同じ反応にそろえる教室ではありません。料理には「見る」「触る」「混ぜる」「切る」「味を見る」「盛りつける」など、いろいろな入口があります。<br/><br/>
+みんなと同じペースが苦手な子も、その子が入りやすい工程から参加できます。必要に応じて手順を小さく分けたり、休憩をはさんだり、講師が間に入って進めます。<br/><br/>
+集団や初めての場所に不安がある場合は、事前にLINEでお子さんの様子を教えてください。その子に合う入り方を一緒に考えます。</div>
+</div>
+<div class="faq-item fade-in">
+<button class="faq-q" onclick="this.parentElement.classList.toggle('open')">予約前に相談できますか？</button>
+<div class="faq-a">はい。対象年齢・兄弟参加・アレルギー・どのレッスンが合うかなど、迷うことがあれば公式LINEでお気軽にご相談ください。</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="final-cta">
+<div class="section-inner" style="text-align:center;">
+<div class="section-label fade-in">Trial Lesson</div>
+<h2 class="section-title fade-in" style="color:white;">気になるレッスンは、<br/>見つかりましたか？</h2>
+<p class="final-cta-lead fade-in">迷ったら、まずは体験レッスンで雰囲気から。<br/>参加したいレッスンが決まっている方は、各レッスンページからそのまま予約できます。</p>
+<div class="final-cta-buttons fade-in">
+<a class="btn btn-white" href="https://tol-app.jp/s/smilecooking/mj9a03">🌸 体験レッスンを予約する</a>
+<a class="btn btn-outline-white" href="https://lin.ee/y2TBSKD">💬 LINEで相談する</a>
+</div>
+<p class="final-cta-small fade-in">「どのレッスンが合うかな？」の相談だけでも大丈夫です。</p>
+</div>
+</section>
+<footer class="site-footer">
+<div class="footer-logo"><a class="footer-logo-link" href="../index.html"><img alt="スマイルクッキング トップへ" class="footer-logo-img" decoding="async" height="414" src="../assets/images/logo-smile-transparent.webp" width="480"/><span class="footer-logo-name">スマイルクッキング</span></a></div>
+<ul class="footer-links"><li><a href="../first-time.html">はじめての方</a></li><li><a href="../about.html">教室について</a></li><li><a href="../lessons/index.html">レッスン一覧</a></li><li><a href="../price.html">料金</a></li><li><a href="../access.html">アクセス</a></li></ul>
+<p class="footer-copy">群馬県太田市本町24-25 ／ © Smile Cooking</p>
+</footer>
+<a class="line-float" href="https://lin.ee/y2TBSKD">💬 LINEで相談する</a>
+<script src="../main.js"></script>
+</body>
+</html>
