@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-08PRGT939K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-08PRGT939K');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="#7EA889" name="theme-color"/>
+<title>お知らせ｜スマイルクッキング最新情報・残席状況</title>
+<meta content="スマイルクッキングの最新情報、レッスンの様子、開催日、残席状況はInstagramと公式LINEでご案内しています。群馬県太田市の子ども・親子料理教室です。" name="description"/><meta content="index,follow" name="robots"/>
+<link href="https://smilecooking.jp/news.html" rel="canonical"/>
+<link href="assets/images/favicon.png" rel="icon" type="image/png"/>
+<meta content="ja_JP" property="og:locale"/>
+<meta content="website" property="og:type"/>
+<meta content="スマイルクッキング" property="og:site_name"/>
+<meta content="お知らせ｜スマイルクッキング最新情報・残席状況" property="og:title"/>
+<meta content="スマイルクッキングの最新情報、レッスンの様子、開催日、残席状況はInstagramと公式LINEでご案内しています。群馬県太田市の子ども・親子料理教室です。" property="og:description"/>
+<meta content="https://smilecooking.jp/news.html" property="og:url"/>
+<meta content="https://smilecooking.jp/assets/images/teacher_group.webp" property="og:image"/><meta content="お知らせ｜スマイルクッキング最新情報・残席状況" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="お知らせ｜スマイルクッキング最新情報・残席状況" name="twitter:title"/>
+<meta content="スマイルクッキングの最新情報、レッスンの様子、開催日、残席状況はInstagramと公式LINEでご案内しています。群馬県太田市の子ども・親子料理教室です。" name="twitter:description"/>
+<meta content="https://smilecooking.jp/assets/images/teacher_group.webp" name="twitter:image"/><meta content="お知らせ｜スマイルクッキング最新情報・残席状況" name="twitter:image:alt"/>
+<link href="style.css" rel="stylesheet"/>
+<style>
+.news-hero {
+  background: linear-gradient(135deg, #FCEEF6 0%, var(--cream) 100%);
+  padding: 80px 24px 60px;
+  text-align: center;
+}
+.news-hero h1 { font-size: clamp(28px,5vw,44px); color: var(--text); margin-bottom: 16px; }
+.news-hero p { font-size: 16px; color: var(--text-muted); max-width: 480px; margin: 0 auto; line-height: 1.9; }
+
+.instagram-section {
+  padding: 56px 24px;
+}
+
+.instagram-accounts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 32px;
+  max-width: 840px;
+  margin: 40px auto 0;
+}
+
+.instagram-account-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+
+.instagram-account-header {
+  padding: 24px 24px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid var(--cream-dark);
+}
+
+.instagram-account-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.instagram-account-icon.pink { background: #FCEEF6; }
+.instagram-account-icon.green { background: var(--green-light); }
+
+.instagram-account-name {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.instagram-account-handle {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.instagram-embed-area {
+  padding: 20px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--cream);
+}
+
+.instagram-embed-area .elfsight-app-placeholder {
+  width: 100%;
+}
+
+.instagram-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af);
+  color: white;
+  transition: opacity 0.2s;
+}
+.instagram-link-btn:hover { opacity: 0.85; }
+
+/* Instagramが読み込まれていない場合のフォールバック */
+.ig-fallback {
+  text-align: center;
+  padding: 32px 20px;
+}
+.ig-fallback-icon { font-size: 48px; margin-bottom: 16px; }
+.ig-fallback-text { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 20px; }
+
+.line-info-box {
+  background: #F0FBF4;
+  border: 2px solid #06C755;
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.line-info-icon { font-size: 40px; flex-shrink: 0; }
+
+.line-info-title {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a7a3c;
+  margin-bottom: 6px;
+}
+
+.line-info-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  .instagram-accounts { grid-template-columns: 1fr; }
+  .line-info-box { flex-direction: column; text-align: center; }
+}
+</style>
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "お知らせ",
+    "url": "https://smilecooking.jp/news.html",
+    "description": "スマイルクッキングの最新情報、レッスンの様子、開催日、残席状況はInstagramと公式LINEでご案内しています。群馬県太田市の子ども・親子料理教室です。",
+    "inLanguage": "ja"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://smilecooking.jp/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "お知らせ",
+        "item": "https://smilecooking.jp/news.html"
+      }
+    ]
+  }
+]
+</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "最新のレッスン情報はどこで見られますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "レッスンの様子やメニューはInstagram（@smile_cooking2022）で更新しています。直近の開催日・残席状況・予約相談は公式LINEが一番分かりやすいです。LINEでは毎週月曜日に、最新の空き枠をお届けしています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Instagramの最新投稿はどこで見られますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Instagram側の仕様や外部サービスの読み込み状況によって、最新投稿が表示されない場合があります。その場合も、ボタンからInstagramへ移動して最新情報をご確認いただけます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "予約や相談はInstagramのDMですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "予約・空き状況の確認・個別相談は、公式LINEからがおすすめです。必要な情報を見返しやすく、リッチメニューからアクセスや予約情報も確認できます。"
+      }
+    }
+  ]
+}</script><noscript><style>.fade-in{opacity:1 !important;transform:none !important;}</style></noscript>
+</head>
+<body>
+<nav class="site-nav">
+<div class="nav-inner">
+<a class="nav-logo" href="index.html"><img alt="スマイルクッキング" class="nav-logo-icon" decoding="async" height="256" src="assets/images/logo-bear-nav.webp" width="256"/><span class="nav-logo-name">スマイルクッキング</span></a>
+<ul class="nav-links" id="global-nav-menu"><li><a href="first-time.html">はじめての方</a></li><li><a href="lessons/index.html">レッスン一覧</a></li><li><a href="price.html">料金</a></li><li><a href="access.html">アクセス</a></li><li><a class="nav-cta" href="https://lin.ee/y2TBSKD">LINEで相談</a></li></ul>
+<button aria-controls="global-nav-menu" aria-expanded="false" aria-label="メニューを開く" class="menu-toggle" type="button">☰</button></div>
+</nav>
+<section class="news-hero">
+<div class="section-label">News &amp; Instagram</div>
+<h1>お知らせ</h1>
+<p>最新のレッスン情報や教室の日常は、Instagramで更新中です。直近の開催日・残席状況はLINEでもご案内しています。</p>
+</section>
+<!-- Instagram埋め込み -->
+<section class="section" id="oshirase" style="background:var(--cream);">
+<div class="section-inner" style="max-width:840px;">
+<div class="section-label fade-in">News</div>
+<h2 class="section-title fade-in">最新のお知らせ</h2>
+<div style="display:grid;gap:14px;">
+<div class="fade-in" style="background:var(--white);border-radius:14px;padding:18px 20px;box-shadow:0 1px 8px rgba(0,0,0,0.05);text-align:left;">
+<div style="display:flex;gap:10px;align-items:center;margin-bottom:8px;"><span style="font-size:12px;color:var(--text-muted);">2026.06.10</span><span style="font-size:11px;font-weight:700;color:var(--white);background:var(--green);border-radius:10px;padding:2px 10px;">受付中</span></div>
+<p style="font-size:14px;line-height:1.9;color:var(--text);">次回の親子体験は<strong>7月5日（日）</strong>に開催します。ご希望の時間帯をお選びいただけます。ご予約は<a href="https://tol-app.jp/s/smilecooking/mj9a03" style="color:var(--terra);font-weight:700;">予約ページ</a>からどうぞ。</p>
+</div>
+<div class="fade-in" style="background:var(--white);border-radius:14px;padding:18px 20px;box-shadow:0 1px 8px rgba(0,0,0,0.05);text-align:left;">
+<div style="display:flex;gap:10px;align-items:center;margin-bottom:8px;"><span style="font-size:12px;color:var(--text-muted);">2026.06.10</span><span style="font-size:11px;font-weight:700;color:var(--white);background:var(--green);border-radius:10px;padding:2px 10px;">お知らせ</span></div>
+<p style="font-size:14px;line-height:1.9;color:var(--text);">全レッスンで使える期間限定回数券（4回13,600円）は<strong>6月30日（火）で販売終了</strong>します。7月からは14,400円・親子おやつレッスン対象になります。詳しくは<a href="price.html" style="color:var(--terra);font-weight:700;">料金ページ</a>へ。</p>
+</div>
+<div class="fade-in" style="background:var(--white);border-radius:14px;padding:18px 20px;box-shadow:0 1px 8px rgba(0,0,0,0.05);text-align:left;">
+<div style="display:flex;gap:10px;align-items:center;margin-bottom:8px;"><span style="font-size:12px;color:var(--text-muted);">2026.06.10</span><span style="font-size:11px;font-weight:700;color:var(--white);background:var(--green);border-radius:10px;padding:2px 10px;">7月テーマ</span></div>
+<p style="font-size:14px;line-height:1.9;color:var(--text);">7月のスマイルクッキングのテーマは<strong>「出汁の基本＆応用」</strong>。おいしさの土台を、親子で楽しく学びます。</p>
+</div>
+<div class="fade-in" style="background:var(--white);border-radius:14px;padding:18px 20px;box-shadow:0 1px 8px rgba(0,0,0,0.05);text-align:left;">
+<div style="display:flex;gap:10px;align-items:center;margin-bottom:8px;"><span style="font-size:12px;color:var(--text-muted);">2026.06.10</span><span style="font-size:11px;font-weight:700;color:var(--white);background:var(--green);border-radius:10px;padding:2px 10px;">満席御礼</span></div>
+<p style="font-size:14px;line-height:1.9;color:var(--text);">6月の親子体験は、満席にて開催しました。ありがとうございました。6月のおやつレッスンも残りわずかです。</p>
+</div>
+</div>
+</div>
+</section>
+<section class="instagram-section">
+<div style="max-width:840px;margin:0 auto;">
+<div class="section-label fade-in">Instagram</div>
+<h2 class="section-title fade-in">Instagramで最新情報をチェック</h2>
+<p class="section-lead fade-in">レッスンの様子・メニュー・開催情報は、スマイルクッキングのInstagramで発信しています。</p>
+</div>
+<div class="instagram-accounts">
+<!-- 子ども・親子向けアカウント -->
+<div class="instagram-account-card fade-in">
+<div class="instagram-account-header">
+<div class="instagram-account-icon pink">🍳</div>
+<div>
+<div class="instagram-account-name">子ども・親子レッスン</div>
+<div class="instagram-account-handle">@smile_cooking2022</div>
+</div>
+</div>
+<div class="instagram-embed-area">
+<div class="ig-fallback">
+<div class="ig-fallback-icon">📸</div>
+<div class="ig-fallback-text">
+            レッスンの様子・メニュー・体験レッスン情報を更新中！<br/>
+            最新記事が表示できない場合も、ボタンからInstagramでご確認いただけます。
+          </div>
+<a class="instagram-link-btn" href="https://www.instagram.com/smile_cooking2022" target="_blank">
+            📷 Instagramを見る
+          </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- LINE登録案内 -->
+<section class="section" style="background:var(--cream-dark);">
+<div class="section-inner" style="text-align:center;">
+<div class="section-label fade-in">LINE</div>
+<h2 class="section-title fade-in">開催情報をLINEで受け取る</h2>
+<p class="section-lead fade-in">体験レッスンの開催日・新しいレッスン情報は、LINE公式アカウントでもお知らせします。</p>
+<div class="line-info-box fade-in">
+<div class="line-info-icon">💬</div>
+<div>
+<div class="line-info-title">LINE公式アカウントを友だち追加</div>
+<div class="line-info-desc">
+          予約・相談・お知らせ受け取りまで、すべてLINEで完結します。<br/>
+          まずは友だち追加してみてください。
+        </div>
+<br/>
+<a class="btn btn-green" href="https://lin.ee/y2TBSKD" style="font-size:14px;">LINEで友だち追加する</a>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="section-inner">
+<div class="section-label fade-in">Q &amp; A</div>
+<h2 class="section-title fade-in">お知らせについてよくある質問</h2>
+<div class="faq-list" style="max-width:680px;margin:0 auto;">
+<div class="faq-item fade-in">
+<button class="faq-q" onclick="this.parentElement.classList.toggle('open')">最新のレッスン情報はどこで見られますか？</button>
+<div class="faq-a">レッスンの様子やメニューはInstagram（@smile_cooking2022）で更新しています。直近の開催日・残席状況・予約相談は公式LINEが一番分かりやすいです。LINEでは毎週月曜日に、最新の空き枠をお届けしています。</div>
+</div>
+<div class="faq-item fade-in">
+<button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Instagramの最新投稿はどこで見られますか？</button>
+<div class="faq-a">Instagram側の仕様や外部サービスの読み込み状況によって、最新投稿が表示されない場合があります。その場合も、ボタンからInstagramへ移動して最新情報をご確認いただけます。</div>
+</div>
+<div class="faq-item fade-in">
+<button class="faq-q" onclick="this.parentElement.classList.toggle('open')">予約や相談はInstagramのDMですか？</button>
+<div class="faq-a">予約・空き状況の確認・個別相談は、公式LINEからがおすすめです。必要な情報を見返しやすく、リッチメニューからアクセスや予約情報も確認できます。</div>
+</div>
+</div>
+</div>
+</section>
+<section class="final-cta">
+<div class="section-inner" style="text-align:center;">
+<div class="section-label fade-in">Trial Lesson</div>
+<h2 class="section-title fade-in" style="color:white;">気になったら、まず体験へ。</h2>
+<p class="final-cta-lead fade-in">Instagramで見て「行ってみたい」と思ったら、体験レッスンへどうぞ。</p>
+<div class="final-cta-buttons fade-in">
+<a class="btn btn-white" href="https://tol-app.jp/s/smilecooking/mj9a03">🌸 体験レッスンを予約する</a>
+<a class="btn btn-outline-white" href="lessons/index.html">レッスン一覧を見る</a>
+<a class="btn btn-outline-white" href="https://lin.ee/y2TBSKD">💬 LINEで相談する</a>
+</div>
+</div>
+</section>
+<footer class="site-footer">
+<div class="footer-logo"><a class="footer-logo-link" href="index.html"><img alt="スマイルクッキング トップへ" class="footer-logo-img" decoding="async" height="414" src="assets/images/logo-smile-transparent.webp" width="480"/><span class="footer-logo-name">スマイルクッキング</span></a></div>
+<ul class="footer-links"><li><a href="first-time.html">はじめての方</a></li><li><a href="about.html">教室について</a></li><li><a href="lessons/index.html">レッスン一覧</a></li><li><a href="price.html">料金</a></li><li><a href="access.html">アクセス</a></li></ul>
+<p class="footer-copy">群馬県太田市本町24-25 ／ © Smile Cooking</p>
+</footer>
+<a class="line-float" href="https://lin.ee/y2TBSKD">💬 LINEで相談する</a>
+<script src="main.js"></script>
+</body>
+</html>
