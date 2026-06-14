@@ -383,6 +383,36 @@ img { max-width: 100%; height: auto; display: block; }
   gap: 16px;
   margin-top: 32px;
 }
+/* トップのヒーローコラージュ：3枚を大小ばらして一画面に */
+.hero-collage {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 14px;
+  margin-top: 30px;
+}
+.hero-collage .photo-card { margin: 0; }
+.hero-collage .collage-main {
+  grid-row: 1 / 3;
+}
+.hero-collage .collage-main img { aspect-ratio: 3 / 4; height: 100%; }
+.hero-collage .collage-sub img { aspect-ratio: 4 / 3; }
+.hero-collage .photo-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hero-collage .photo-card:hover {
+  transform: translateY(-4px) rotate(-0.5deg);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+}
+@media (max-width: 640px) {
+  .hero-collage {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .hero-collage .collage-main { grid-row: 1 / 3; }
+  .hero-collage .collage-main img { aspect-ratio: 3 / 4; }
+  .hero-collage .collage-sub img { aspect-ratio: 1 / 1; }
+}
 .photo-card {
   background: var(--white);
   border-radius: var(--radius);
@@ -931,4 +961,40 @@ p, li, .section-lead, .final-cta-lead, .faq-a, .compare-note {
 /* 文節単位の改行（対応ブラウザでは「テーマ／で開催」のような切れ方がなくなる） */
 h1, h2, h3, p, li, .section-title, .section-lead, .final-cta-lead {
   word-break: auto-phrase;
+}
+
+
+/* ── フォトギャラリー（マソンリー：高さばらばらを美しく敷き詰め） ── */
+.masonry-gallery {
+  column-count: 3;
+  column-gap: 14px;
+  margin-top: 28px;
+}
+.masonry-gallery .photo-card {
+  break-inside: avoid;
+  margin-bottom: 14px;
+  display: inline-block;
+  width: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.masonry-gallery .photo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.13);
+}
+.masonry-gallery .photo-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: auto;
+}
+@media (max-width: 900px) {
+  .masonry-gallery { column-count: 2; column-gap: 12px; }
+  .masonry-gallery .photo-card { margin-bottom: 12px; }
+}
+@media (max-width: 480px) {
+  .masonry-gallery { column-count: 2; column-gap: 8px; }
+  .masonry-gallery .photo-card { margin-bottom: 8px; }
 }
