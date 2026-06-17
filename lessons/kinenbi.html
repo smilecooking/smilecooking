@@ -481,6 +481,6 @@
 <a class="line-float" href="https://lin.ee/y2TBSKD">💬 LINEで相談する</a>
 <script src="../main.js"></script>
 <nav class="lesson-dock" id="lesson-dock" aria-label="レッスンへのクイックアクセス"><div class="lesson-dock-label">レッスンを見る</div><div class="lesson-dock-items"><a href="../lessons/oyako.html"><span class="dock-badge">👨‍👩‍👧</span>親子</a><a href="../lessons/shogakusei.html"><span class="dock-badge">🍳</span>小学生</a><a href="../lessons/oyatsu.html"><span class="dock-badge">🧁</span>おやつ</a></div></nav>
-<script>(function(){var d=document.getElementById('lesson-dock');if(!d)return;function onScroll(){var y=window.scrollY||window.pageYOffset;if(y<200){d.classList.add('dock-hidden');}else{d.classList.remove('dock-hidden');}}window.addEventListener('scroll',onScroll,{passive:true});onScroll();})();</script>
+<script>(function(){var d=document.getElementById('lesson-dock');if(!d)return;function onScroll(){var y=window.scrollY||window.pageYOffset;if(y<200){d.classList.add('dock-hidden');}else{d.classList.remove('dock-hidden');}}window.addEventListener('scroll',onScroll,{passive:true});onScroll();function setDockHeight(){document.documentElement.style.setProperty('--dock-h',d.offsetHeight+'px');}if(window.ResizeObserver){new ResizeObserver(setDockHeight).observe(d);}else{window.addEventListener('resize',setDockHeight);window.addEventListener('load',setDockHeight);}setDockHeight();})();</script>
 </body>
 </html>

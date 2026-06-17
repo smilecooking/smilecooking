@@ -314,8 +314,6 @@ img { max-width: 100%; height: auto; display: block; }
   .faq-list { margin-top: 22px; }
   .faq-q { padding: 16px 18px; font-size: 14px; line-height: 1.65; }
   .faq-a { padding: 12px 18px 16px; font-size: 13px; line-height: 1.95; }
-  .line-float { left: auto; right: 16px; bottom: 74px; padding: 13px 16px; border-radius: 50px; font-size: 0; gap: 0; }
-  .line-float::before { content: "💬"; font-size: 22px; }
   .site-footer { padding-bottom: 96px; }
 }
 
@@ -1013,7 +1011,7 @@ h1, h2, h3, p, li, .section-title, .section-lead, .final-cta-lead {
     backdrop-filter: blur(10px);
     border-top: 1px solid var(--cream-dark);
     box-shadow: 0 -3px 20px rgba(0,0,0,0.12);
-    padding: 0 8px calc(6px + env(safe-area-inset-bottom));
+    padding: 0 8px calc(4px + env(safe-area-inset-bottom));
     transform: translateY(0);
     transition: transform 0.3s ease;
   }
@@ -1021,26 +1019,26 @@ h1, h2, h3, p, li, .section-title, .section-lead, .final-cta-lead {
   .lesson-dock-label {
     text-align: center;
     font-family: 'Zen Maru Gothic', sans-serif;
-    font-size: 10.5px; font-weight: 700;
+    font-size: 10px; font-weight: 700;
     color: var(--green);
     letter-spacing: 0.04em;
-    padding: 6px 0 2px;
+    padding: 4px 0 1px;
   }
   .lesson-dock-items { display: flex; }
   .lesson-dock a {
     flex: 1;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 4px;
-    padding: 4px 4px 8px;
+    gap: 2px;
+    padding: 2px 4px 5px;
     text-decoration: none;
     color: var(--text);
     font-family: 'Zen Maru Gothic', sans-serif;
-    font-size: 11.5px; font-weight: 700;
+    font-size: 10.5px; font-weight: 700;
   }
   .lesson-dock .dock-badge {
-    width: 46px; height: 46px; border-radius: 50%;
+    width: 34px; height: 34px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    font-size: 23px;
+    font-size: 17px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.10);
   }
   .lesson-dock a:nth-child(1) .dock-badge { background: var(--green-light); }
@@ -1051,4 +1049,15 @@ h1, h2, h3, p, li, .section-title, .section-lead, .final-cta-lead {
   }
   .lesson-dock a[aria-current="page"] { color: var(--green); }
   .lesson-dock .dock-badge span { font-size: 20px; }
+
+  /* レッスン追従バーの実測高さに合わせてLINEボタンを持ち上げ、重なりを防ぐ */
+  .line-float {
+    right: 16px;
+    bottom: calc(var(--dock-h, 80px) + 14px);
+    padding: 13px 16px;
+    border-radius: 50px;
+    font-size: 0;
+    gap: 0;
+  }
+  .line-float::before { content: "💬"; font-size: 22px; }
 }
