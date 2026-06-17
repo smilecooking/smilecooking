@@ -144,5 +144,7 @@
 </footer>
 <a class="line-float" href="https://lin.ee/y2TBSKD">💬 LINEで相談する</a>
 <script src="main.js"></script>
+<nav class="lesson-dock" id="lesson-dock" aria-label="レッスンへのクイックアクセス"><div class="lesson-dock-label">レッスンを見る</div><div class="lesson-dock-items"><a href="lessons/oyako.html"><span class="dock-badge">👨‍👩‍👧</span>親子</a><a href="lessons/shogakusei.html"><span class="dock-badge">🍳</span>小学生</a><a href="lessons/oyatsu.html"><span class="dock-badge">🧁</span>おやつ</a></div></nav>
+<script>(function(){var d=document.getElementById('lesson-dock');if(!d)return;var show=false;function onScroll(){var y=window.scrollY||window.pageYOffset;if(y>400&&!show){d.classList.add('visible');show=true;}else if(y<=400&&show){d.classList.remove('visible');show=false;}}window.addEventListener('scroll',onScroll,{passive:true});onScroll();})();</script>
 </body>
 </html>
