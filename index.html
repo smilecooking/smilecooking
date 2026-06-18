@@ -27,7 +27,7 @@
 <meta content="スマイルクッキング｜群馬県太田市の子ども・親子料理教室" name="twitter:title"/>
 <meta content="群馬県太田市の子ども・親子料理教室スマイルクッキング。親子レッスン・小学生料理教室・おやつレッスン・記念日プランを開催。料理を通して自分で考えて動く力を育てます。" name="twitter:description"/>
 <meta content="https://smilecooking.jp/assets/images/shogakusei-main.webp" name="twitter:image"/><meta content="スマイルクッキング｜群馬県太田市の子ども・親子料理教室" name="twitter:image:alt"/>
-<link as="image" href="assets/images/oyatsu-photo-1.webp" rel="preload"/><link href="style.css?v=36" rel="stylesheet"/>
+<link as="image" href="assets/images/home-main-02.webp" rel="preload"/><link href="style.css?v=43" rel="stylesheet"/>
 <style>
 /* ── ヒーロー ── */
 .hero {
@@ -57,8 +57,8 @@
 .hero-inner { max-width: 840px; margin: 0 auto; position: relative; z-index: 1; }
 .hero-grid { max-width: 1100px; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items: center; }
 .hero-photo { position: relative; }
-.hero-photo img { width: 100%; height: auto; border-radius: 28px; box-shadow: 0 12px 40px rgba(0,0,0,0.13); display: block; aspect-ratio: 4/3.4; object-fit: cover; }
-.hero-photo-badge { position: absolute; bottom: 16px; left: 16px; background: rgba(255,255,255,0.95); color: var(--green); font-family: 'Zen Maru Gothic', sans-serif; font-weight: 700; font-size: 14px; padding: 8px 16px; border-radius: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.12); }
+.hero-photo .hero-collage { margin-top: 0; }
+.hero-photo-badge { position: absolute; bottom: 16px; left: 16px; z-index: 2; background: rgba(255,255,255,0.95); color: var(--green); font-family: 'Zen Maru Gothic', sans-serif; font-weight: 700; font-size: 14px; padding: 8px 16px; border-radius: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.12); }
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
   background: var(--green-light); color: var(--green);
@@ -77,13 +77,26 @@
   font-weight: 700; color: var(--green);
   margin-bottom: 28px; line-height: 1.6;
 }
-.hero-lead {
-  font-size: 16px; line-height: 2;
-  color: var(--text-muted); margin-bottom: 40px;
-  max-width: 520px;
-}
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
 .hero-note { font-size: 13px; color: var(--text-muted); margin-top: 18px; }
+
+/* ── 息継ぎ：見守りの一枚 ── */
+.breath-section { padding: 56px 24px; text-align: center; }
+.breath-inner { max-width: 420px; margin: 0 auto; }
+.breath-lead {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 700; color: var(--green);
+  line-height: 1.6; margin-bottom: 24px;
+}
+.breath-photo { border-radius: 24px; overflow: hidden; box-shadow: 0 12px 36px rgba(0,0,0,0.12); margin-bottom: 22px; }
+.breath-photo img { width: 100%; height: auto; display: block; aspect-ratio: 3/4; object-fit: cover; }
+.breath-caption { font-size: 15px; color: var(--text-muted); line-height: 1.85; }
+@media (max-width: 640px) {
+  .breath-section { padding: 40px 20px; }
+  .breath-lead { font-size: 18px; margin-bottom: 18px; }
+  .breath-caption { font-size: 14px; }
+}
 
 /* ── 安心バー ── */
 .trust-bar { background: var(--green); padding: 18px 24px; }
@@ -353,12 +366,10 @@
   .hero { min-height: auto; padding: 80px 20px 40px; }
   .hero-grid { grid-template-columns: 1fr; gap: 28px; }
   .hero-photo { order: -1; }
-  .hero-photo img { border-radius: 22px; aspect-ratio: 4/3.2; }
   .hero-photo-badge { font-size: 12.5px; padding: 7px 14px; }
   .hero-eyebrow { font-size: 12px; margin-bottom: 24px; }
   .hero-title { font-size: clamp(26px, 8vw, 34px); line-height: 1.55; }
   .hero-title-sub { font-size: 17px; line-height: 1.65; margin-bottom: 22px; }
-  .hero-lead { font-size: 14px; line-height: 1.95; margin-bottom: 28px; }
   .trial-price-main { font-size: 42px; }
   .philosophy-flow { gap: 6px; }
   .philosophy-flow-item { min-width: 80px; padding: 12px 14px; }
@@ -526,25 +537,25 @@
 <div class="hero-bg-circle hero-bg-circle-2"></div>
 <div class="hero-inner hero-grid">
 <div class="hero-text">
-<div class="hero-eyebrow">📍 群馬県太田市の子ども・親子料理教室</div>
+<div class="hero-eyebrow">📍 群馬県太田市 ｜ 2歳半〜小学生の料理教室</div>
 <h1 class="hero-title">
-      子どもが「やりたい！」と言うたびに、<br/>
-      ドキッとしていませんか。
+      その「またあとでね」を、<br/>
+      そろそろ卒業しませんか。
     </h1>
-<p class="hero-title-sub">ここでは、その「やりたい」を全部受け取ります。</p>
-<p class="hero-lead">
-      料理を通して、子どもが自分で見て、考えて、決める時間を。<br/>
-      安全は大人が整えながら、子どもが主役になれる場所です。
-    </p>
+<p class="hero-title-sub">子どもの笑顔とチカラを引き出す、<br/>料理の時間へ。</p>
 <div class="hero-actions">
-<a class="btn btn-primary" href="#trial">🌸 まずは体験レッスンへ</a>
-<a class="btn btn-secondary" href="lessons/index.html">レッスンを見る</a>
+<a class="btn btn-primary" href="#trial">🌸 体験レッスンを見る</a>
+<a class="btn btn-secondary" href="lessons/index.html">レッスン一覧を見る</a>
 </div>
 <p class="hero-note">迷っている方は体験から。レッスンが決まっている方はそのままどうぞ。</p>
 </div>
 <div class="hero-photo">
-<img alt="お揃いのバンダナでおやつ作りに取り組む子どもたち" decoding="async" fetchpriority="high" height="960" src="assets/images/oyatsu-photo-1.webp" width="1280"/>
-<span class="hero-photo-badge">🐻 楽しく、本気で。</span>
+<div class="hero-collage">
+<div class="photo-card collage-main fade-in"><img alt="親子で一緒に料理を楽しむ様子" class="photo-card__img--focus-top" decoding="async" fetchpriority="high" height="1280" loading="eager" src="assets/images/home-main-02.webp" width="960"/></div>
+<div class="photo-card collage-sub fade-in"><img alt="子どもが包丁を使って料理に取り組む様子" decoding="async" height="960" loading="eager" src="assets/images/home-main-01.webp" width="1280"/></div>
+<div class="photo-card collage-sub fade-in"><img alt="子どもたちがおやつ作りを楽しむ様子" decoding="async" height="960" loading="eager" src="assets/images/home-main-03.webp" width="1280"/></div>
+</div>
+<span class="hero-photo-badge">🐻 汚れてOK、挑戦してOK。</span>
 </div>
 </div>
 </section>
@@ -568,13 +579,12 @@
 </div>
 </div>
 </section>
-<section class="section" style="padding:36px 24px 8px;">
-<div class="section-inner">
-<div class="hero-collage">
-<div class="photo-card collage-main fade-in"><img alt="親子で一緒に料理を楽しむ様子" class="photo-card__img--focus-top" decoding="async" fetchpriority="high" height="1280" loading="eager" src="assets/images/home-main-02.webp" width="960"/></div>
-<div class="photo-card collage-sub fade-in"><img alt="子どもが包丁を使って料理に取り組む様子" decoding="async" height="960" loading="lazy" src="assets/images/home-main-01.webp" width="1280"/></div>
-<div class="photo-card collage-sub fade-in"><img alt="子どもたちがおやつ作りを楽しむ様子" decoding="async" height="960" loading="lazy" src="assets/images/home-main-03.webp" width="1280"/></div>
-</div>
+<!-- 息継ぎ：見守りの一枚 -->
+<section class="section breath-section">
+<div class="section-inner breath-inner">
+<p class="breath-lead fade-in">ママは少し離れて、<br/>その横顔を見ていてください。</p>
+<div class="breath-photo fade-in"><img alt="調理に夢中で集中する子どもの横顔" decoding="async" height="1477" loading="lazy" src="assets/images/trial_closeup.webp" width="1108"/></div>
+<p class="breath-caption">「できた！」の瞬間を、<br/>一緒に笑える時間です。</p>
 </div>
 </section>
 <!-- ② 共感 -->
@@ -824,7 +834,7 @@
 <p class="section-lead fade-in">料理の腕前を競う教室でも、完成度を採点する教室でもありません。<br/>レシピどおりに作れることより、「自分で決めて、やってみた」を大切にしています。</p>
 <div class="fade-in" style="background:var(--white);border-radius:var(--radius-sm);padding:26px 24px;margin-top:24px;box-shadow:0 1px 8px rgba(0,0,0,0.05);text-align:left;">
 <div style="font-family:'Zen Maru Gothic',sans-serif;font-size:16px;font-weight:700;color:var(--terra);margin-bottom:14px;text-align:center;">だから、こんな親子に向いています。</div>
-<p style="font-size:14.5px;line-height:2.1;color:var(--text);">🌱 家では時間がなくて、キッチンに立たせてあげられないママ。<br/>🌱 失敗も汚れも、経験のうちだと思いたいママ。<br/>🌱 比べられるのではなく、その子のペースで育ってほしいと願うママ。</p>
+<p style="font-size:14.5px;line-height:2.1;color:var(--text);">🌱 家では時間がなくて、キッチンに立たせてあげられないママ。<br/>🌱 挑戦も汚れも、経験のうちだと思いたいママ。<br/>🌱 比べられるのではなく、その子のペースで育ってほしいと願うママ。</p>
 </div>
 </div>
 </section>
@@ -932,7 +942,7 @@
 </footer>
 <a class="line-float" href="https://lin.ee/y2TBSKD">💬 LINEで相談する</a>
 <script src="main.js"></script>
-<nav class="lesson-dock" id="lesson-dock" aria-label="レッスンへのクイックアクセス"><div class="lesson-dock-label">レッスンを見る</div><div class="lesson-dock-items"><a href="lessons/oyako.html"><span class="dock-badge">👨‍👩‍👧</span>親子</a><a href="lessons/shogakusei.html"><span class="dock-badge">🍳</span>小学生</a><a href="lessons/oyatsu.html"><span class="dock-badge">🧁</span>おやつ</a></div></nav>
-<script>(function(){var d=document.getElementById('lesson-dock');if(!d)return;function onScroll(){var y=window.scrollY||window.pageYOffset;if(y<200){d.classList.add('dock-hidden');}else{d.classList.remove('dock-hidden');}}window.addEventListener('scroll',onScroll,{passive:true});onScroll();function setDockHeight(){document.documentElement.style.setProperty('--dock-h',d.offsetHeight+'px');}if(window.ResizeObserver){new ResizeObserver(setDockHeight).observe(d);}else{window.addEventListener('resize',setDockHeight);window.addEventListener('load',setDockHeight);}setDockHeight();})();</script>
+<nav class="lesson-dock" id="lesson-dock" aria-label="レッスンへのクイックアクセス"><a class="lesson-dock-label" href="lessons/index.html">レッスンを見る</a><div class="lesson-dock-items"><a href="lessons/oyako.html"><span class="dock-badge">👨‍👩‍👧</span>親子</a><a href="lessons/shogakusei.html"><span class="dock-badge">🍳</span>小学生</a><a href="lessons/oyatsu.html"><span class="dock-badge">🧁</span>おやつ</a></div></nav>
+<script>(function(){var d=document.getElementById('lesson-dock');if(!d)return;function onScroll(){var y=window.scrollY||window.pageYOffset;if(y<200){d.classList.add('dock-hidden');}else{d.classList.remove('dock-hidden');}}window.addEventListener('scroll',onScroll,{passive:true});onScroll();})();</script>
 </body>
 </html>
