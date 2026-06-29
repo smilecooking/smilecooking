@@ -314,7 +314,7 @@ img { max-width: 100%; height: auto; display: block; }
   .faq-list { margin-top: 22px; }
   .faq-q { padding: 16px 18px; font-size: 14px; line-height: 1.65; }
   .faq-a { padding: 12px 18px 16px; font-size: 13px; line-height: 1.95; }
-  .line-float { left: auto; right: 16px; bottom: 74px; padding: 13px 16px; border-radius: 50px; font-size: 0; gap: 0; }
+  .line-float { left: auto; right: 16px; bottom: 96px; padding: 13px 16px; border-radius: 50px; font-size: 0; gap: 0; }
   .line-float::before { content: "💬"; font-size: 22px; }
   .site-footer { padding-bottom: 96px; }
 }
