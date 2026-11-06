@@ -1,27 +1,11 @@
-# スマイルクッキング公式サイト｜GitHub公開手順
+# 本版の公開方式
 
-## 最初の1回だけ
+2026年11月6日版は、GitHub Pagesでリポジトリ直下の静的ファイルを公開します。既存の公開ブランチ・ルート設定、独自ドメイン`smilecooking.jp`を維持します。
 
-1. このZIPを解凍します。
-2. 解凍したフォルダの中身を、現在の公式サイト用GitHubリポジトリの一番上へアップロードします。
-3. GitHubの `Settings` → `Pages` → `Build and deployment` を開きます。
-4. `Source` を `GitHub Actions` にします。
-5. `Actions` 画面で公開処理が緑のチェックになるまで待ちます。
-6. `Settings` → `Pages` の `Custom domain` が `smilecooking.jp` になっていることを確認します。
+更新ファイルは既存の同名ファイルを上書きします。`index.html`、各ページの`index.html`、`styles.css`、`script.js`、画像、フォント、転送ページ、サイトマップ、robotsを一緒に反映します。ZIPを置くだけでは更新されません。
 
-## 毎月の更新
+`.nojekyll`と`CNAME`、既存の写真URL、転送用ページを削除しないでください。GitHub Pagesの自動公開が成功したことと、公開URLで更新内容が見えることを両方確認します。
 
-1. `app/monthly-data.ts` を開きます。
-2. 月、テーマ、メニュー、料金、画像、受付状況を変更します。
-3. 新しい月のページが必要な場合だけ `app/lessons/YYYY-MM/page.tsx` を追加します。
-4. 変更したファイルをGitHubへアップロードします。公開は自動で始まります。
+旧Next.jsの`npm run build`や`build:github-pages`による再生成は本版の更新手順ではありません。旧実装から再生成すると古い情報に戻ります。
 
-詳しい役割分担とSEO確認は `CONTENT-MAINTENANCE.md` にまとめています。
-
-## 大切な注意
-
-- ZIPファイルそのものをGitHubへ置いても公開されません。必ず解凍した中身をアップロードしてください。
-- `public/images` フォルダを省くと写真とロゴが表示されません。
-- `.github/workflows/deploy-pages.yml` を省くと自動公開されません。
-- `CNAME` は独自ドメイン `smilecooking.jp` を維持するために必要です。
-- 既存ファイルと同じ名前のものは、今回の完成版で上書きしてください。
+更新前の復元用ブランチ：`backup-before-hp-update-20261106`。復元時はその内容を新しいコミットとして戻し、履歴を強制的に書き換えません。

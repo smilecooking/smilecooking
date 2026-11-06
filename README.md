@@ -1,32 +1,20 @@
-# スマイルクッキング公式サイト
+# スマイルクッキング公式HP
 
-群馬県太田市の子ども・親子料理教室「スマイルクッキング」の公式サイト完成版です。
+2026年11月6日の更新版は、リポジトリ直下の静的HTML・CSS・JavaScriptを公開します。
 
-## 公開する方へ
+- 公開ドメイン：`https://smilecooking.jp/`
+- トップ：`index.html`
+- 主要ページ：`lessons/`、`guide/`、`kodawari/`、`curriculum/`、`access/`、`faq/`、`policy/`
+- 共通スタイル：`styles.css`
+- 共通操作：`script.js`
+- 計測：`site-config.js`、`analytics.js`（既存GA4 IDを継続）
+- 写真：`assets/images/`。既存の`images/`と画像URLも保持。
+- 移行表：`URL_MIGRATION.json`
 
-最初に `GITHUB-UPLOAD-GUIDE.md` をお読みください。
+既存のGitHub Pagesの公開設定と独自ドメインを維持します。`.nojekyll`と`CNAME`を削除しないでください。
 
-- GitHubへは、このフォルダの中身をすべてアップロードします。
-- `Settings` → `Pages` → `Source` は `GitHub Actions` を選びます。
-- `public/images` と `.github/workflows` を省かないでください。
-- 独自ドメインは `smilecooking.jp` に設定済みです。
+`app/`、`public/`、Next.js関連設定は旧実装です。旧実装を再ビルドして公開すると、今回の文章・料金・導線が元に戻るため、今回の更新元としては使いません。
 
-## 毎月更新する方へ
+HPは通年情報と月テーマを掲載します。最新メニュー・開催日・空席は公式LINE https://lin.ee/vgqcSd6 へ案内します。Instagramは https://www.instagram.com/re_smile2022/ です。
 
-月替わり情報は原則として `app/monthly-data.ts` の1か所で管理します。ページの役割と更新順は `CONTENT-MAINTENANCE.md` にまとめています。
-
-## 制作環境
-
-- Next.js / React / TypeScript
-- Noto Sans JP
-- GitHub Pages用の静的出力に対応
-- Google Analytics、SEOメタデータ、構造化データ、サイトマップ、robots.txtを設定済み
-
-## 確認用コマンド
-
-```bash
-npm ci
-npm run build:github-pages
-```
-
-完成した公開用ファイルは `out` フォルダへ出力されます。通常はGitHub Actionsが自動で行うため、手元で実行する必要はありません。
+更新時は`CONTENT-MAINTENANCE.md`を参照してください。

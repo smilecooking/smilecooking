@@ -1,0 +1,25 @@
+{
+  "redirect_type": "instant_meta_refresh_not_http_301",
+  "redirects": {
+    "/about.html": "/kodawari/",
+    "/access.html": "/access/",
+    "/first-time.html": "/guide/",
+    "/first-time/": "/guide/",
+    "/price.html": "/guide/#price",
+    "/price/": "/guide/#price",
+    "/oyako-lesson.html": "/lessons/oyako/",
+    "/shogakusei-lesson.html": "/lessons/shogakusei/",
+    "/lessons/oyako.html": "/lessons/oyako/",
+    "/lessons/shogakusei.html": "/lessons/shogakusei/",
+    "/lessons/oyatsu.html": "/lessons/oyatsu/",
+    "/lessons/kinenbi.html": "/lessons/kinenbi/",
+    "/lessons/latest/": "/lessons/"
+  },
+  "retained": [
+    "/news.html",
+    "/lessons/2026-08/",
+    "/lessons/2026-09/",
+    "/lessons/kinenbi/"
+  ],
+  "old_public_image_paths_preserved": true
+}
