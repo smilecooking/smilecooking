@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded',()=>{
   const b=document.querySelector('.menu-btn'),n=document.querySelector('.nav');
   if(b&&n){
-    b.addEventListener('click',()=>{const open=n.dataset.open==='1';n.dataset.open=open?'0':'1';b.setAttribute('aria-expanded',open?'false':'true')});
+    b.addEventListener('click',()=>{const open=n.dataset.open==='1';n.dataset.open=open?'0':'1';b.setAttribute('aria-expanded',open?'false':'true');if(!open)n.querySelector('a')?.focus()});
     n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{n.dataset.open='0';b.setAttribute('aria-expanded','false')}));
   }
 
-  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&n?.dataset.open==='1'){n.dataset.open='0';b.setAttribute('aria-expanded','false');b.focus()}});
   // Orientation: direct search visitors should immediately know where they are.
   const path=location.pathname.replace(/\/index\.html$/,'/');
   document.querySelectorAll('.nav a[href^="/"]').forEach(a=>{
@@ -13,36 +13,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     if(href!=='/' && path.startsWith(href)) a.setAttribute('aria-current','page');
   });
 
-
-  // Interaction stays content-led: no persistent progress meter.
-
-  // Scroll reveals enhance hierarchy; content remains visible with JS off/reduced motion.
-  if(!reduce && 'IntersectionObserver' in window){
-    const io=new IntersectionObserver(entries=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){entry.target.classList.add('is-visible');io.unobserve(entry.target)}
-      });
-    },{rootMargin:'0px 0px -9% 0px',threshold:.06});
-
-    document.querySelectorAll('[data-reveal]').forEach(el=>{
-      el.classList.add('reveal-ready');
-      const r=el.getBoundingClientRect();
-      if(r.top<window.innerHeight*.92) el.classList.add('is-visible');
-      else io.observe(el);
-    });
-
-    document.querySelectorAll('[data-stagger="true"]').forEach(grid=>{
-      [...grid.children].forEach((child,i)=>{
-        child.classList.add('reveal-child');
-        child.style.setProperty('--stagger-delay',`${Math.min(i,6)*42}ms`);
-        const r=child.getBoundingClientRect();
-        if(r.top<window.innerHeight*.94) child.classList.add('is-visible');
-        else io.observe(child);
-      });
-    });
-  }else{
-    document.querySelectorAll('[data-reveal], [data-stagger="true"]>*').forEach(el=>el.classList.add('is-visible'));
-  }
 
   // Keep expansion in place. Deep links open the exact answer from another page.
   function openLinkedFAQ(){

@@ -1,0 +1,122 @@
+[
+  {
+    "page": "index.html",
+    "reviewed": true,
+    "editorial_changes": 19,
+    "before_characters": 2417,
+    "after_characters": 2384,
+    "facts_and_old_urls_preserved": true
+  },
+  {
+    "page": "guide/index.html",
+    "reviewed": true,
+    "editorial_changes": 3,
+    "before_characters": 4561,
+    "after_characters": 4580,
+    "facts_and_old_urls_preserved": true
+  },
+  {
+    "page": "faq/index.html",
+    "reviewed": true,
+    "editorial_changes": 1,
+    "before_characters": 2759,
+    "after_characters": 2767,
+    "facts_and_old_urls_preserved": true
+  },
+  {
+    "page": "lessons/index.html",
+    "reviewed": true,
+    "editorial_changes": 7,
+    "before_characters": 984,
+    "after_characters": 999,
+    "facts_and_old_urls_preserved": true
+  },
+  {
+    "page": "lessons/oyako/index.html",
+    "reviewed": true,
+    "editorial_changes": 10,
+    "before_characters": 989,
+    "after_characters": 1065,
+    "facts_and_old_urls_preserved": true
+  },
+  {
+    "page": "lessons/shogakusei/index.html",
+    "reviewed": true,
+    "editorial_changes": 9,
+    "before_characters": 1202,
+    "after_characters": 1214,
+    "facts_and_old_urls_preserved": true
+  },
+  {
+    "page": "lessons/oyatsu/index.html",
+    "reviewed": true,
+    "editorial_changes": 7,
+    "before_characters": 618,
+    "after_characters": 673,
+    "facts_and_old_urls_preserved": true
+  },
+  {
+    "page": "access/index.html",
+    "reviewed": true,
+    "editorial_changes": 4,
+    "before_characters": 715,
+    "after_characters": 766,
+    "facts_and_old_urls_preserved": true
+  },
+  {
+    "page": "curriculum/index.html",
+    "reviewed": true,
+    "editorial_changes": 13,
+    "before_characters": 1289,
+    "after_characters": 1315,
+    "facts_and_old_urls_preserved": true
+  },
+  {
+    "page": "kodawari/index.html",
+    "reviewed": true,
+    "editorial_changes": 14,
+    "before_characters": 1906,
+    "after_characters": 1939,
+    "facts_and_old_urls_preserved": true
+  },
+  {
+    "page": "policy/index.html",
+    "reviewed": true,
+    "editorial_changes": 4,
+    "before_characters": 755,
+    "after_characters": 845,
+    "facts_and_old_urls_preserved": true
+  },
+  {
+    "page": "news.html",
+    "reviewed": true,
+    "editorial_changes": 2,
+    "before_characters": 408,
+    "after_characters": 416,
+    "facts_and_old_urls_preserved": true
+  },
+  {
+    "page": "lessons/2026-08/index.html",
+    "reviewed": true,
+    "editorial_changes": 1,
+    "before_characters": 430,
+    "after_characters": 438,
+    "facts_and_old_urls_preserved": true
+  },
+  {
+    "page": "lessons/2026-09/index.html",
+    "reviewed": true,
+    "editorial_changes": 1,
+    "before_characters": 437,
+    "after_characters": 443,
+    "facts_and_old_urls_preserved": true
+  },
+  {
+    "page": "lessons/kinenbi/index.html",
+    "reviewed": true,
+    "editorial_changes": 3,
+    "before_characters": 413,
+    "after_characters": 430,
+    "facts_and_old_urls_preserved": true
+  }
+]
