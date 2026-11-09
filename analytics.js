@@ -43,11 +43,26 @@
     const values = { cta_location: cleanToken(position), lesson };
     if (url.hostname === 'lin.ee' && url.pathname === '/vgqcSd6') send('line_cta_click', values);
     else if (url.hostname === 'www.instagram.com' || url.hostname === 'instagram.com') send('instagram_click', values);
-    else if (url.origin === location.origin && url.hash === '#club') send('club_interest_click', values);
+    else if (url.origin === location.origin && url.pathname === '/lessons/shogakusei/' && url.hash === '#club') send('club_interest_click', values);
     else if (url.origin === location.origin && lessonOf(url.pathname)) send('lesson_select', values);
   });
   document.addEventListener('click', event => {
     const button = event.target.closest?.('[data-find-lesson]');
     if (button && ['oyako','shogakusei','oyatsu'].includes(button.dataset.findLesson)) send('lesson_finder_select', { lesson: button.dataset.findLesson });
+  });
+  // Fixed FAQ topic IDs only; never send answer text, photographs or personal inputs.
+  const faqTopics = new Set(["first-visit", "trial-date", "lesson-styles", "beginner", "knife", "focus", "parent-observation", "sibling-companion", "allergy", "booking", "latest", "fees", "membership-fees", "club", "cancel"]);
+  document.addEventListener('click', event => {
+    const summary = event.target.closest?.('summary');
+    const detail = summary?.parentElement;
+    if (detail?.matches('details[data-faq-id]') && !detail.open && faqTopics.has(detail.dataset.faqId)) {
+      send('faq_open', { faq_topic: detail.dataset.faqId });
+    }
+    const link = event.target.closest?.('a[href]');
+    if (!link) return;
+    let url; try { url = new URL(link.href, location.href); } catch (_) { return; }
+    if (url.origin === location.origin && url.pathname === '/faq/' && faqTopics.has(url.hash.slice(1))) {
+      send('faq_link_click', { faq_topic: url.hash.slice(1) });
+    }
   });
 })();
